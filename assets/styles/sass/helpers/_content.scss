@@ -1,0 +1,109 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Content ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.content {
+
+    /* ~~~~~~~~~~ First element fix ~~~~~~~~~~ */
+
+    .first-element-fix {
+        & + * {
+            margin-top: 0;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 40px;
+    }
+
+
+    /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
+
+    > p:not(li) {
+        @extend .small-element-margin-top;
+
+        a {
+            border-bottom: 1px dotted transparent;
+
+            &:hover,
+            &:focus {
+                border-color: inherit;
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ ul, ol lists ~~~~~~~~~~ */
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul,
+    ol {
+        list-style-position: outside;
+        @extend .small-element-margin-top;
+        margin-left: 25px;
+
+        ul,
+        ol {
+            list-style-position: outside;
+            margin-left: 25px;
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        ol {
+            list-style-type: lower-latin;
+        }
+
+        li {
+            @extend p;
+            margin-top: 10px;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-top: 25px;
+        display: block;
+
+        &.alignleft {
+            float: left;
+            width: 100%;
+            margin: 0 25px 15px 0;
+
+            @include media-breakpoint-up(sm) {
+                width: auto;
+            }
+        }
+
+         &.alignright {
+            float: right;
+            width: 100%;
+            margin: 0 0 15px 25px;
+
+            @include media-breakpoint-up(sm) {
+                width: auto;
+            }
+        }
+    }
+
+}

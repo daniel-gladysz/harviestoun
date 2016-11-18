@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: *PHPSESSID=
+Disallow: *session_id=
+Sitemap: http://showcase24.eu/fairgoods/sitemap_index.xml

@@ -1,0 +1,111 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ General ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~ Body ~~~~~~~~~~ */
+
+    body {
+        background: #fff;
+        // @include primary-font('regular');
+        // @include fluid-type(18px, 16px);
+    }
+
+
+    /* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
+
+    h1 {
+        // @include primary-font('regular');
+        // @include fluid-type(42px, 32px);
+    }
+
+
+    /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
+
+    b,
+    strong {
+        // @include primary-font('bold');
+    }
+
+    em {
+        font-style: italic;
+    }
+
+
+    /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
+
+    img {
+        display: inline-block;
+    }
+
+
+    /* ~~~~~~~~~~ To top ~~~~~~~~~~ */
+
+    #return-to-top {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background: #aaa;
+        width: 45px;
+        height: 45px;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.isVisible {
+            opacity: 0.75;
+            visibility: visible;
+            @extend %single-transition;
+        }
+
+        i {
+            position: relative;
+            top: -2px;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Hamburger ~~~~~~~~~~ */
+
+    .hamburger {
+        transform:scale(0.7);
+        -webkit-transform:scale(0.7);
+        -moz-transform:scale(0.7);
+        -o-transform:scale(0.7);
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: -12px;
+        right: 12px;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+
+        .hamburger-box {
+            .hamburger-inner {
+                &,
+                &:after,
+                &:before {
+                    background-color: #000;
+                    height: 3px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+
+    * {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }

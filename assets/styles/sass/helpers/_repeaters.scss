@@ -1,0 +1,284 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Repeaters ~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~ Absolute center ~~~~~~~~~~ */
+
+    %absolute-center {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+    /* ~~~~~~~~~~ Single transition ~~~~~~~~~~ */
+
+    %single-transition {
+        transition: all 0.2s ease-in-out;
+    }
+
+
+    /* ~~~~~~~~~~ Vertical center ~~~~~~~~~~ */
+
+    .vertical-center {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        &--disable {
+            position: static;
+            top: 0;
+            -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                    transform: translateY(0);
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Background cover ~~~~~~~~~~ */
+
+    .background-cover {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    /* ~~~~~~~~~~ Hide ~~~~~~~~~~ */
+
+    .hide {
+        text-indent: -998em;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* ~~~~~~~~~~ Clearfix ~~~~~~~~~~ */
+
+    .clearfix {
+        clear: both;
+    }
+
+
+    /* ~~~~~~~~~~ Lists ~~~~~~~~~~ */
+
+    .centered-list {
+        text-align: left;
+
+        @include media-breakpoint-up(md) {
+            text-align: center;
+        }
+
+        li {
+            position: relative;
+            display: block;
+
+            @include media-breakpoint-up(md) {
+                display: inline-block;
+            }
+        }
+    }
+
+    .reset-list {
+        list-style: none;
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        li {
+            text-indent: 0;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Overflow ~~~~~~~~~~ */
+
+    .overflow-x-hidden {
+        overflow-x: hidden;
+    }
+
+
+    /* ~~~~~~~~~~ Icons ~~~~~~~~~~ */
+
+    i {
+        line-height: 0;
+        vertical-align: middle;
+    }
+
+
+    /* ~~~~~~~~~~ Element paddings and margins ~~~~~~~~~~ */
+
+    .element-paddings {
+        padding: $element-space__xs 0;
+
+        @include media-breakpoint-up(sm) {
+            padding: $element-space__sm 0;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: $element-space__md 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: $element-space__lg 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: $element-space__xl 0;
+        }
+
+        &--top {
+            padding-top: $element-space__xs;
+            padding-bottom: 0;
+
+            @include media-breakpoint-up(sm) {
+                padding-top: $element-space__sm;
+            }
+
+            @include media-breakpoint-up(md) {
+                padding-top: $element-space__md;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-top: $element-space__lg;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-top: $element-space__xl;
+            }
+        }
+
+        &--bottom {
+            padding-bottom: $element-space__xs;
+            padding-top: 0;
+
+            @include media-breakpoint-up(sm) {
+                padding-bottom: $element-space__sm;
+            }
+
+            @include media-breakpoint-up(md) {
+                padding-bottom: $element-space__md;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-bottom: $element-space__lg;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-bottom: $element-space__xl;
+            }
+        }
+    }
+
+    .element-margins {
+        margin: $element-space__xs 0;
+
+        @include media-breakpoint-up(sm) {
+            margin: $element-space__sm 0;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin: $element-space__md 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: $element-space__lg 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin: $element-space__xl 0;
+        }
+
+        &--top {
+            margin-top: $element-space__xs;
+            margin-bottom: 0;
+
+            @include media-breakpoint-up(sm) {
+                margin-top: $element-space__sm;
+            }
+
+            @include media-breakpoint-up(md) {
+                margin-top: $element-space__md;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-top: $element-space__lg;
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-top: $element-space__xl;
+            }
+        }
+
+        &--bottom {
+            margin-bottom: $element-space__xs;
+            margin-top: 0;
+
+            @include media-breakpoint-up(sm) {
+                margin-bottom: $element-space__sm;
+            }
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: $element-space__md;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: $element-space__lg;
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-bottom: $element-space__xl;
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Small element margin top ~~~~~~~~~~ */
+
+    .small-element-margin-top {
+        margin-top: 15px;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: 25px;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Flexbox ~~~~~~~~~~~ */
+
+    .flexbox {
+        display: flex;
+        list-style: none;
+
+        &--space-between {
+            justify-content: space-between;
+
+            > li {
+                padding: 0 15px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        &--wrap {
+            flex-wrap: wrap;
+        }
+    }
