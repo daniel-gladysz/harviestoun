@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php require_once('templates/homepage.php'); ?>
 
 <main id="index">
@@ -28,3 +29,6 @@
 		</div><!-- /.conainter -->
 	</section><!-- /.blog -->
 </main><!-- /#index -->
+=======
+<?php require_once('templates/homepage.php'); ?>
+>>>>>>> parent of a9c4526... Created index.php
